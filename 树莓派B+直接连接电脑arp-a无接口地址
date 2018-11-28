@@ -1,4 +1,4 @@
-树莓派B+直接连接电脑arp-a无接口地址
+树莓派B+直接连接电脑arp-a，连接树莓派的网络无树莓派地址
 https://blog.csdn.net/weijinqian0/article/details/51112911
 https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=134190
   在我实际操作过程中，先改为静态IP然后arp -a就有树莓派IP地址，但是putty并不能连接；
