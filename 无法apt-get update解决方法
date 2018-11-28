@@ -1,0 +1,26 @@
+在进行linux软件包下载更新时，报错
+
+apt-get update连接不上
+
+进入 vi /etc/apt/sources.list 
+将网址修改为如下之一即可。
+
+163源
+
+deb http://mirrors.163.com/debian/ jessie main non-free contrib 
+deb http://mirrors.163.com/debian/ jessie-updates main non-free contrib 
+deb http://mirrors.163.com/debian/ jessie-backports main non-free contrib 
+deb-src http://mirrors.163.com/debian/ jessie main non-free contrib 
+deb-src http://mirrors.163.com/debian/ jessie-updates main non-free contrib 
+deb-src http://mirrors.163.com/debian/ jessie-backports main non-free contrib 
+deb http://mirrors.163.com/debian-security/ jessie/updates main non-free contrib 
+deb-src http://mirrors.163.com/debian-security/ jessie/updates main non-free contrib
+
+中科大源
+
+deb http://mirrors.ustc.edu.cn/debian jessie main contrib non-free 
+deb-src http://mirrors.ustc.edu.cn/debian jessie main contrib non-free 
+deb http://mirrors.ustc.edu.cn/debian jessie-proposed-updates main contrib non-free 
+deb-src http://mirrors.ustc.edu.cn/debian jessie-proposed-updates main contrib non-free 
+deb http://mirrors.ustc.edu.cn/debian jessie-updates main contrib non-free 
+deb-src http://mirrors.ustc.edu.cn/debian jessie-updates main contrib non-free
