@@ -4,3 +4,17 @@ https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=134190
   在我实际操作过程中，先改为静态IP然后arp -a就有树莓派IP地址，但是putty并不能连接；
 之后将之改为自动获取IP，然后arp -a，发现树莓派的IP地址仍然存在，并且可以putty上，
 但是树莓派并没有网络。（还在分析中------2018-11-28）
+
+(interfaces:
+source-directory /etc/network/interfaces.d
+
+auto eth0
+iface eth0 inet manual
+
+allow-hotplug wlan0
+iface wlan0 inet manual
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+allow-hotplug wlan1
+iface wlan1 inet manual
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf)
