@@ -18,3 +18,9 @@ iface wlan0 inet manual
 allow-hotplug wlan1
 iface wlan1 inet manual
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf)
+
+
+另一种方法（但是我没有成功）：
+https://blog.csdn.net/qijitao/article/details/55001537
+                                                           ----2018。11.28
+-----------------------------------------------------------------------------
