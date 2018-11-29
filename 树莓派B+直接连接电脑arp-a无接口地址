@@ -40,3 +40,7 @@ iface wlan0 inet manual
 allow-hotplug wlan1
 iface wlan1 inet manual
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf)
+    
+注意：树莓派能够有网络的前提是树莓派的Ip与设置的静态IP在同一个网段，比如我的树莓派
+IP是：192.168.137.138，前三个数字要是一样的（设置IP为：192.168.137.1）
+-----------------------------------------------------------------------------
