@@ -24,3 +24,19 @@ iface wlan1 inet manual
 https://blog.csdn.net/qijitao/article/details/55001537
                                                            ----2018。11.28
 -----------------------------------------------------------------------------
+
+解决方法：已经解决
+将以太网（连接树莓派那个端）设置静态IP，我是192.168.137.1；
+然后把上述的interfaces文件中的manual，改为dhcp:
+source-directory /etc/network/interfaces.d
+
+auto eth0
+iface eth0 inet dhcp
+
+allow-hotplug wlan0
+iface wlan0 inet manual
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+allow-hotplug wlan1
+iface wlan1 inet manual
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf)
